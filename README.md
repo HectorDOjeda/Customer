@@ -13,7 +13,7 @@ Para ejecutar la api, necesitas tener instalado:
 
 Para instalar la api, sigue estos pasos:
 
-1. Clona el repositorio usando el comando `git clone https://github.com/user/customer-api.git`.
+1. Clona el repositorio usando el comando `git clone https://github.com/Samandrael/Customer.git`.
 2. Abre una terminal y navega al directorio del proyecto usando el comando `cd customer-api`.
 3. Ejecuta el comando `dotnet restore` para restaurar las dependencias del proyecto.
 4. Ejecuta el comando `dotnet ef database update` para crear la base de datos y la tabla de clientes.
