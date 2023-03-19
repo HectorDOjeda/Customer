@@ -29,6 +29,7 @@ namespace Customer.Controllers
             }
         }
 
+        //get all customers
         // GET: api/Customer
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Models.Customer>>> GetCustomer()
@@ -36,6 +37,7 @@ namespace Customer.Controllers
             return await _context.Customer.ToListAsync();
         }
 
+        //get customer by id
         [HttpGet("{id}")]
         public async Task<ActionResult<Models.Customer>> GetCustomer(int id)
         {
@@ -49,6 +51,7 @@ namespace Customer.Controllers
             return customer;
         }
 
+        //create customer
         // POST: api/Customer
         [HttpPost]
         public async Task<ActionResult<Models.Customer>> PostCustomer(Models.Customer customer)
@@ -71,9 +74,10 @@ namespace Customer.Controllers
             _context.Entry(customer).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok();
         }
 
+        //delete customer by id
         // DELETE: api/Customer/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer(int id)
@@ -88,7 +92,7 @@ namespace Customer.Controllers
             _context.Customer.Remove(customer);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok();
         }
 
     }
