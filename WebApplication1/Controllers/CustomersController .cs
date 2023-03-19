@@ -38,6 +38,7 @@ namespace Customer.Controllers
         }
 
         //get customer by id
+        //api/Customer/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<Models.Customer>> GetCustomer(int id)
         {
@@ -62,6 +63,7 @@ namespace Customer.Controllers
             return CreatedAtAction(nameof(GetCustomer), new { id = customer.Id }, customer);
         }
 
+        //update customer
         // PUT: api/Customer/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCustomer(int id, Models.Customer customer)
